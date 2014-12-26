@@ -1,7 +1,5 @@
-FROM centos:centos7
+FROM cristianokbc/cento7-epel
 MAINTAINER Cristiano Kliemann
 
-RUN yum repolist \
-    && sudo yum repolist \
-    && yum install -y node npm \
+RUN yum install -y node npm --enable-repo=epel\
     && yum clean
